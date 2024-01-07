@@ -3,6 +3,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
+import '@/css/style.css'
 
 const MAX_DISPLAY = 5
 
@@ -10,15 +11,21 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
+        <div className="space-y-10 pb-8 pt-6 md:space-y-6">
+          <h1
+            className="font-bold tracking-wide text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-4xl md:leading-14"
+            style={{ fontFamily: 'system-ui' }}
+          >
+            Hey, I'm <span className="text-teal-400"> Yizhou Li</span>{' '}
+            <span className="waving-handwave">👋</span>
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
+          <div className="text-lg leading-10 text-gray-500 dark:text-gray-400">
+            <p>I write code</p>
+            <p>I play music, games, and enjoy cooking </p>
+            <p>This blog is for capturing the everyday awesomeness in life</p>
+          </div>
         </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+        {/* <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags } = post
@@ -68,9 +75,9 @@ export default function Home({ posts }) {
               </li>
             )
           })}
-        </ul>
+        </ul> */}
       </div>
-      {posts.length > MAX_DISPLAY && (
+      {/* {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
             href="/blog"
@@ -80,12 +87,12 @@ export default function Home({ posts }) {
             All Posts &rarr;
           </Link>
         </div>
-      )}
-      {siteMetadata.newsletter?.provider && (
+      )} */}
+      {/* {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
         </div>
-      )}
+      )} */}
     </>
   )
 }

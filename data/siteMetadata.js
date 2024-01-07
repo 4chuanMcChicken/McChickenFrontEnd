@@ -3,7 +3,8 @@ const siteMetadata = {
   title: '4chuan McChicken Blog',
   author: 'Yizhou Li',
   headerTitle: '4chuan McChicken Blog',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description:
+    'Embark on a journey through my daily life with this blog. Join me as I share my passion for music, dive into thrilling games, and savor the delights of extraordinary cuisine.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
